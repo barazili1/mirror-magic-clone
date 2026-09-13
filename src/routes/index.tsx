@@ -334,17 +334,39 @@ function Index() {
       {transferLoading && (
         <div className="fixed inset-0 z-40 mx-auto flex max-w-[430px] flex-col items-center justify-center bg-[#7a7a7a]/90">
           <svg
-            className="size-[90px] animate-spin text-white"
+            className="size-[110px] text-white"
             viewBox="0 0 100 100"
             fill="none"
             stroke="currentColor"
-            strokeWidth={6}
+            strokeWidth={5}
             strokeLinecap="round"
             strokeLinejoin="round"
             aria-label="جاري التحميل"
-            style={{ animationDuration: "1.6s" }}
           >
-            <path d="M50 88 C32 88 18 76 14 58 C12 48 14 38 20 30 C28 18 42 12 56 14 C68 16 78 24 84 34 C85 36 87 37 89 36 L92 34 C93 33 94 34 93 35 L88 45 C87 47 87 49 88 51 C89 53 89 56 88 59 C84 76 68 88 50 88 Z" />
+            {/* Static Vodafone icon */}
+            <path
+              fill="currentColor"
+              stroke="none"
+              d="M67.5 19.5 C70 21 71.5 24 70.5 27 L64.5 40.5 C63.5 43 60.5 44 58 43 C56 42 54 41 52 41 C40 41 30 50 30 62 C30 75 40 85 52 85 C65 85 75 75 75 62 C75 58 74 54 72 51 C71 48 72 45 75 44 L78 42 C80 41 82 42 83 44 L86 50 C88 54 89 58 89 62 C89 82 72 98 52 98 C32 98 16 82 16 62 C16 43 32 27 52 27 C55 27 58 28 61 29 C63 29 65 28 66 26 L67.5 19.5 Z"
+            />
+            {/* Spinning surrounding arcs */}
+            <g
+              className="animate-spin"
+              style={{ animationDuration: "1.6s", transformOrigin: "50px 50px" }}
+            >
+              <path d="M50 6 A44 44 0 0 1 84 24" />
+              <path d="M50 2 A48 48 0 0 1 88 22" />
+              <path d="M50 -2 A52 52 0 0 1 92 20" />
+              <path d="M50 94 A44 44 0 0 1 16 76" />
+              <path d="M50 98 A48 48 0 0 1 12 78" />
+              <path d="M50 102 A52 52 0 0 1 8 80" />
+              <path d="M94 50 A44 44 0 0 1 76 84" />
+              <path d="M98 50 A48 48 0 0 1 78 88" />
+              <path d="M102 50 A52 52 0 0 1 80 92" />
+              <path d="M6 50 A44 44 0 0 1 24 16" />
+              <path d="M2 50 A48 48 0 0 1 22 12" />
+              <path d="M-2 50 A52 52 0 0 1 20 8" />
+            </g>
           </svg>
           <p className="mt-6 text-[20px] font-medium text-white">جاري التحميل</p>
         </div>
