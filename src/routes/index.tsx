@@ -336,11 +336,15 @@ function Index() {
           <svg
             className="size-[90px] animate-spin text-white"
             viewBox="0 0 100 100"
-            fill="currentColor"
+            fill="none"
+            stroke="currentColor"
+            strokeWidth={6}
+            strokeLinecap="round"
+            strokeLinejoin="round"
             aria-label="جاري التحميل"
             style={{ animationDuration: "1.6s" }}
           >
-            <path d="M50 92 C26 92 8 74 8 50 C8 26 26 8 50 8 C67 8 82 18 90 33 C91 36 93 37 96 36 L98 34 C99 33 100 33 99 35 L94 45 C93 47 93 49 94 51 C95 53 95 56 94 59 C90 78 72 92 50 92 Z" />
+            <path d="M50 88 C32 88 18 76 14 58 C12 48 14 38 20 30 C28 18 42 12 56 14 C68 16 78 24 84 34 C85 36 87 37 89 36 L92 34 C93 33 94 34 93 35 L88 45 C87 47 87 49 88 51 C89 53 89 56 88 59 C84 76 68 88 50 88 Z" />
           </svg>
           <p className="mt-6 text-[20px] font-medium text-white">جاري التحميل</p>
         </div>
