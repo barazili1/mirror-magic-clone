@@ -78,8 +78,8 @@ function TransferPage() {
   return (
     <main dir="rtl" className="mx-auto flex h-dvh max-w-[430px] flex-col bg-[#f2f2f4] text-foreground shadow-2xl">
       {/* Header */}
-      <header className="relative flex h-[72px] items-center justify-center bg-white">
-        <h1 className="text-[24px] font-black">تحويل أموال</h1>
+      <header className="relative flex h-[62px] items-center justify-center bg-white">
+        <h1 className="text-[22px] font-black">تحويل أموال</h1>
         <Link
           to="/"
           aria-label="رجوع"
@@ -89,11 +89,11 @@ function TransferPage() {
         </Link>
       </header>
 
-      <div className="flex-1 px-4 pt-8">
-        <h2 className="mb-5 px-1 text-[32px] font-black">حول إلي</h2>
+      <div className="flex-1 px-4 pt-7">
+        <h2 className="mb-3 px-1 text-[28px] font-black">حول إلي</h2>
 
         {/* Phone field */}
-        <div className="relative flex h-[70px] items-center rounded-[22px] border-[3px] border-transparent bg-white px-5 transition-colors focus-within:border-[#5aa8b5]">
+        <div className="relative flex h-[62px] items-center rounded-[20px] border-2 border-[#bfbfbf] bg-white px-5 transition-colors focus-within:border-[#5aa8b5]">
           <label className="flex flex-1 flex-col justify-center">
             {phone.length > 0 && (
               <span className="text-[13px] text-foreground/50">رقم الموبايل</span>
@@ -107,7 +107,7 @@ function TransferPage() {
               onChange={(e) => setPhone(toWesternDigits(e.target.value).replace(/\D/g, "").slice(0, 11))}
               className={`bg-transparent leading-none outline-none placeholder:text-foreground/90 ${
                 phone.length === 0
-                  ? "text-[20px] font-semibold placeholder:text-[20px] placeholder:font-semibold"
+                  ? "text-[19px] font-medium placeholder:text-[19px] placeholder:font-medium"
                   : "text-[22px] font-bold tracking-wide"
               }`}
             />
@@ -122,7 +122,7 @@ function TransferPage() {
               <X size={26} strokeWidth={2.2} />
             </button>
           ) : (
-            <ContactBookIcon className="size-[32px] shrink-0 text-[#e60000]" />
+            <ContactBookIcon className="size-[26px] shrink-0 text-[#e60000]" />
           )}
         </div>
 
@@ -181,8 +181,8 @@ function TransferPage() {
 
         {/* Favorites card */}
         {!showAmount && (
-          <div className="mt-7 rounded-[20px] bg-white p-2.5">
-            <div className="flex flex-col items-center rounded-[16px] bg-[#f2f2f4] px-6 py-10 text-center">
+          <div className="mt-8 rounded-[20px] bg-white p-2.5">
+            <div className="flex flex-col items-center rounded-[16px] bg-[#f2f2f4] px-6 py-8 text-center">
               <Star size={38} strokeWidth={1.5} className="mb-4" />
               <p className="text-[15px] font-medium leading-relaxed">
                 زود أرقامك المفضلة هنا علشان تلاقيهم بسهولة !
@@ -200,8 +200,8 @@ function TransferPage() {
         <button
           type="button"
           disabled={!showAmount}
-          className={`h-[58px] w-full rounded-[16px] text-[19px] font-bold text-white transition-colors ${
-            showAmount ? "bg-[#e60000]" : "bg-[#ea9b9b]"
+          className={`h-[50px] w-full rounded-[14px] text-[18px] font-bold text-white transition-colors ${
+            showAmount ? "bg-[#e60000]" : "bg-[#e49a99]"
           }`}
         >
           تأكيد
