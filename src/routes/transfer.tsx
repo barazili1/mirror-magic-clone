@@ -182,7 +182,7 @@ function TransferPage() {
         {/* Favorites card */}
         {!showAmount && (
           <div className="mt-8 rounded-[20px] bg-white p-2.5">
-            <div className="flex flex-col items-center rounded-[16px] bg-[#f2f2f4] px-6 py-10 text-center">
+            <div className="flex flex-col items-center rounded-[16px] bg-[#f2f2f4] px-6 py-8 text-center">
               <Star size={38} strokeWidth={1.5} className="mb-4" />
               <p className="text-[15px] font-medium leading-relaxed">
                 زود أرقامك المفضلة هنا علشان تلاقيهم بسهولة !
