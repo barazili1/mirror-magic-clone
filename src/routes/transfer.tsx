@@ -142,7 +142,6 @@ function TransferPage() {
 
             <div className="rounded-[18px] bg-white px-4 pb-5 pt-7">
               <div className="flex items-center justify-center gap-2 pb-5">
-                <span className="size-[13px] shrink-0 rounded-full bg-[#2e8b9a]" />
                 <input
                   type="tel"
                   inputMode="numeric"
