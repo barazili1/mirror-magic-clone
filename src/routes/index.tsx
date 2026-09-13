@@ -3,13 +3,13 @@ import { Bell, ChevronLeft, Delete, Eye, EyeOff, Gift, Smartphone, X } from "luc
 import { type SVGProps, useState } from "react";
 
 import { Button } from "@/components/ui/button";
-import electricSahlIcon from "@/assets/icon-electric-sahl.asset.json";
-import electricIcon from "@/assets/icon-electric.asset.json";
-import gasNewIcon from "@/assets/icon-gas-new.asset.json";
-import gasIcon from "@/assets/icon-gas.asset.json";
+import electricSahlIcon from "@/assets/icon-electric-sahl.png";
+import electricIcon from "@/assets/icon-electric.png";
+import gasNewIcon from "@/assets/icon-gas-new.png";
+import gasIcon from "@/assets/icon-gas.png";
 import offerBanner from "@/assets/offer-banner.jpg";
-import prosecutionIcon from "@/assets/icon-prosecution.asset.json";
-import vodafoneCashLogo from "@/assets/vodafone-cash-logo.png.asset.json";
+import prosecutionIcon from "@/assets/icon-prosecution.png";
+import vodafoneCashLogo from "@/assets/wallet-cash-logo.png";
 
 // No head() here: the home route inherits title/description/og/twitter from
 // __root.tsx, and ships no og:image so serve-time hosting can inject the
