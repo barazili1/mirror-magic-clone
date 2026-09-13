@@ -93,10 +93,10 @@ function TransferPage() {
         <h2 className="mb-5 px-1 text-[32px] font-black">حول إلي</h2>
 
         {/* Phone field */}
-        <div className="relative flex h-[104px] items-center rounded-[22px] border-[3px] border-transparent bg-white px-6 transition-colors focus-within:border-[#5aa8b5]">
-          <label className="flex flex-1 flex-col justify-center gap-1">
+        <div className="relative flex h-[70px] items-center rounded-[22px] border-[3px] border-transparent bg-white px-5 transition-colors focus-within:border-[#5aa8b5]">
+          <label className="flex flex-1 flex-col justify-center">
             {phone.length > 0 && (
-              <span className="text-[16px] text-foreground/50">رقم الموبايل</span>
+              <span className="text-[13px] text-foreground/50">رقم الموبايل</span>
             )}
             <input
               type="tel"
@@ -105,10 +105,10 @@ function TransferPage() {
               value={phone}
               placeholder={phone.length === 0 ? "رقم الموبايل" : ""}
               onChange={(e) => setPhone(toWesternDigits(e.target.value).replace(/\D/g, "").slice(0, 11))}
-              className={`bg-transparent outline-none placeholder:text-foreground/90 ${
+              className={`bg-transparent leading-none outline-none placeholder:text-foreground/90 ${
                 phone.length === 0
-                  ? "text-[24px] font-semibold placeholder:text-[24px] placeholder:font-semibold"
-                  : "text-[26px] font-bold tracking-wide"
+                  ? "text-[20px] font-semibold placeholder:text-[20px] placeholder:font-semibold"
+                  : "text-[22px] font-bold tracking-wide"
               }`}
             />
           </label>
@@ -117,12 +117,12 @@ function TransferPage() {
               type="button"
               aria-label="مسح الرقم"
               onClick={() => { setPhone(""); setAmount(""); }}
-              className="grid size-[44px] shrink-0 place-items-center text-foreground/80"
+              className="grid size-[38px] shrink-0 place-items-center text-foreground/80"
             >
-              <X size={32} strokeWidth={2.2} />
+              <X size={26} strokeWidth={2.2} />
             </button>
           ) : (
-            <ContactBookIcon className="size-[40px] shrink-0 text-[#e60000]" />
+            <ContactBookIcon className="size-[32px] shrink-0 text-[#e60000]" />
           )}
         </div>
 
