@@ -78,22 +78,22 @@ function TransferPage() {
   return (
     <main dir="rtl" className="mx-auto flex h-dvh max-w-[430px] flex-col bg-[#f2f2f4] text-foreground shadow-2xl">
       {/* Header */}
-      <header className="relative flex h-[62px] items-center justify-center bg-white">
-        <h1 className="text-[22px] font-black">تحويل أموال</h1>
+      <header className="relative flex h-[58px] items-center justify-center bg-white">
+        <h1 className="text-[20px] font-black">تحويل أموال</h1>
         <Link
           to="/"
           aria-label="رجوع"
-          className="absolute right-5 top-1/2 grid size-[52px] -translate-y-1/2 place-items-center rounded-full bg-white shadow-[0_1px_6px_rgba(0,0,0,0.12)]"
+          className="absolute right-4 top-1/2 grid size-[46px] -translate-y-1/2 place-items-center rounded-full bg-white shadow-[0_1px_6px_rgba(0,0,0,0.12)]"
         >
-          <ChevronRight size={30} strokeWidth={2.5} />
+          <ChevronRight size={26} strokeWidth={2.5} />
         </Link>
       </header>
 
-      <div className="flex-1 px-4 pt-7">
-        <h2 className="mb-3 px-1 text-[28px] font-black">حول إلي</h2>
+      <div className="flex-1 px-4 pt-6">
+        <h2 className="mb-3 px-1 text-[26px] font-black">حول إلي</h2>
 
         {/* Phone field */}
-        <div className="relative flex h-[62px] items-center rounded-[20px] border-2 border-[#bfbfbf] bg-white px-5 transition-colors focus-within:border-[#5aa8b5]">
+        <div className="relative flex h-[58px] items-center rounded-[18px] border-2 border-[#bfbfbf] bg-white px-4 transition-colors focus-within:border-[#5aa8b5]">
           <label className="flex flex-1 flex-col justify-center">
             {phone.length > 0 && (
               <span className="text-[13px] text-foreground/50">رقم الموبايل</span>
@@ -107,8 +107,8 @@ function TransferPage() {
               onChange={(e) => setPhone(toWesternDigits(e.target.value).replace(/\D/g, "").slice(0, 11))}
               className={`bg-transparent leading-none outline-none placeholder:text-foreground/90 ${
                 phone.length === 0
-                  ? "text-[19px] font-medium placeholder:text-[19px] placeholder:font-medium"
-                  : "text-[22px] font-bold tracking-wide"
+                  ? "text-[18px] font-medium placeholder:text-[18px] placeholder:font-medium"
+                  : "text-[20px] font-bold tracking-wide"
               }`}
             />
           </label>
@@ -128,21 +128,21 @@ function TransferPage() {
 
         {/* Amount section */}
         {showAmount && (
-          <div className="mt-6 animate-in fade-in slide-in-from-bottom-2 duration-300">
-            <div className="mb-3 flex items-center justify-between px-1">
-              <span className="text-[26px] font-black">مبلغ</span>
+          <div className="mt-5 animate-in fade-in slide-in-from-bottom-2 duration-300">
+            <div className="mb-2.5 flex items-center justify-between px-1">
+              <span className="text-[24px] font-black">مبلغ</span>
               <button
                 type="button"
-                className="flex items-center gap-2 text-[16px] font-semibold text-foreground/50"
+                className="flex items-center gap-1.5 text-[15px] font-semibold text-foreground/50"
               >
-                <FeesIcon className="size-[22px]" />
+                <FeesIcon className="size-[20px]" />
                 الرسوم
               </button>
             </div>
 
-            <div className="rounded-[20px] bg-white px-4 pb-6 pt-8">
-              <div className="flex items-center justify-center gap-2.5 pb-6">
-                <span className="size-[11px] rounded-full bg-[#2e8b9a]" />
+            <div className="rounded-[18px] bg-white px-4 pb-5 pt-7">
+              <div className="flex items-center justify-center gap-2 pb-5">
+                <span className="size-[13px] shrink-0 rounded-full bg-[#2e8b9a]" />
                 <input
                   type="tel"
                   inputMode="numeric"
@@ -150,30 +150,30 @@ function TransferPage() {
                   value={toArabicDigits(amount)}
                   placeholder="٠"
                   onChange={(e) => setAmount(toWesternDigits(e.target.value).replace(/\D/g, ""))}
-                  style={{ width: `${Math.max(amount.length, 1) + 0.4}ch` }}
-                  className="bg-transparent text-center text-[38px] font-black leading-[1.05] outline-none transition-[width] placeholder:text-foreground"
+                  style={{ width: `${Math.max(amount.length, 1) + 0.3}ch` }}
+                  className="bg-transparent text-center text-[34px] font-black leading-[1.05] text-[#2e8b9a] caret-[#2e8b9a] outline-none transition-[width] placeholder:text-[#2e8b9a]"
                   aria-label="المبلغ"
                 />
-                <span className="text-[38px] font-black leading-[1.05]">جنيه</span>
+                <span className="text-[34px] font-black leading-[1.05]">جنيه</span>
               </div>
 
-              <div className="flex justify-center gap-3 pb-4">
+              <div className="flex justify-center gap-2.5 pb-3.5">
                 {quickAmounts.map((chip) => (
                   <button
                     key={chip.value}
                     type="button"
                     onClick={() => addAmount(chip.value)}
-                    className="flex h-[48px] items-center justify-center gap-1.5 rounded-full border border-foreground/25 bg-white px-5"
+                    className="flex h-[44px] items-center justify-center gap-1.5 rounded-full border border-foreground/25 bg-white px-4"
                   >
-                    <span className="text-[20px] font-black leading-none">+</span>
-                    <span className="text-[16px] font-bold">جنيه</span>
-                    <span className="text-[20px] font-black leading-none">{chip.label}</span>
+                    <span className="text-[18px] font-black leading-none">+</span>
+                    <span className="text-[15px] font-bold">جنيه</span>
+                    <span className="text-[18px] font-black leading-none">{chip.label}</span>
                   </button>
                 ))}
               </div>
 
-              <p className="text-center text-[14px] text-foreground/50">
-                المبلغ المسموح به من ٠ جنيه إلى ٦٠٠٠٠ جنيه
+              <p className="text-center text-[13px] text-foreground/50">
+                المبلغ المسموح به من ٥ جنيه إلى ٦٠٠٠٠ جنيه
               </p>
             </div>
           </div>
@@ -200,7 +200,7 @@ function TransferPage() {
         <button
           type="button"
           disabled={!showAmount}
-          className={`h-[50px] w-full rounded-[14px] text-[18px] font-bold text-white transition-colors ${
+          className={`h-[48px] w-full rounded-[14px] text-[17px] font-bold text-white transition-colors ${
             showAmount ? "bg-[#e60000]" : "bg-[#e49a99]"
           }`}
         >
