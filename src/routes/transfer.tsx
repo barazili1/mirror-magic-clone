@@ -194,7 +194,10 @@ function TransferPage() {
       <div className="px-5 pb-9">
         <button
           type="button"
-          className="h-[58px] w-full rounded-[16px] bg-[#e57373]/90 text-[19px] font-bold text-white"
+          disabled={!showAmount}
+          className={`h-[58px] w-full rounded-[16px] text-[19px] font-bold text-white transition-colors ${
+            showAmount ? "bg-[#e60000]" : "bg-[#ea9b9b]"
+          }`}
         >
           تأكيد
         </button>
