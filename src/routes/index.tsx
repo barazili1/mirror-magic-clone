@@ -150,11 +150,11 @@ const shortcuts = [
 ];
 
 const services = [
-  { label: "النيابة العامة", img: prosecutionIcon.url },
-  { label: "كارت الكهرباء", img: electricSahlIcon.url },
-  { label: "كارت الغاز", img: gasNewIcon.url },
-  { label: "كهرباء", img: electricIcon.url },
-  { label: "غاز", img: gasIcon.url },
+  { label: "النيابة العامة", img: prosecutionIcon },
+  { label: "كارت الكهرباء", img: electricSahlIcon },
+  { label: "كارت الغاز", img: gasNewIcon },
+  { label: "كهرباء", img: electricIcon },
+  { label: "غاز", img: gasIcon },
 ];
 
 function Index() {
@@ -411,7 +411,7 @@ function PinSheet({
       <div className="relative flex h-full flex-col items-center rounded-t-[28px] bg-[#eeeeee] px-6 pt-10 text-foreground">
         <div className="flex flex-col items-center">
           <img
-            src={vodafoneCashLogo.url}
+            src={vodafoneCashLogo}
             alt="كاش"
             width={90}
             height={110}
